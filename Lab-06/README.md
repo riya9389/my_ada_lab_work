@@ -12,7 +12,7 @@ This lab contains implementations of:
 
 ##  Programs Included
 
-### activity Selection Problem
+### Activity Selection Problem
 
 -  Selects maximum number of non-overlapping activities.
 -  Implemented and compared:
@@ -24,14 +24,14 @@ This lab contains implementations of:
 
 
 
-###  Dijkestra's algorithm
+###  Dijkestra's Algorithm
 -  Finds shortest path from a source vertex to all other vertices.
 -  Selects the minimum distance vertex at each step.
 -  Works for graphs with non-negative edge weights.
 -  Time Complexity: O(V²) (Basic Implementation)
 
  
-###  Prim's algorithm
+###  Prim's Algorithm
 -  Constructs a Minimum Spanning Tree (MST).
 -  Implemented using:
     -  near[i] array
@@ -41,7 +41,7 @@ This lab contains implementations of:
 -  Time Complexity: O(V²)
 
 
-###  Spanning tree(Cycle detection method)
+###  Spanning Tree(Cycle detection method)
 -  Constructs a spanning tree by:
     -  Making DSU ,findParent and unionByRank function
     -  Ensuring no cycle is formed
