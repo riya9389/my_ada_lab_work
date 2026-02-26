@@ -1,5 +1,5 @@
 
-# Lab-05 – Convex Hull & Greedy Algorithms
+# Lab-06 – Greedy Algorithms
 
 ##  Overview
 This lab contains implementations of:
