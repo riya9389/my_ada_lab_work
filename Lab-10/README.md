@@ -1,52 +1,89 @@
-Lab-10: Longest Common Subsequence & All-Pairs Shortest Path (Dynamic Programming)
-Aim
+# Lab-10: Longest Common Subsequence & All-Pairs Shortest Path (Dynamic Programming)
 
-To implement the Longest Common Subsequence (LCS) and All-Pairs Shortest Path algorithms using Dynamic Programming and visualize their results using graphs in Python.
+## Aim
+To implement the Longest Common Subsequence (LCS) and All-Pairs Shortest Path algorithms using Dynamic Programming and visualize the results using Python.
 
-Theory
-Longest Common Subsequence (LCS)
+---
 
-The Longest Common Subsequence problem is a classic Dynamic Programming problem. It finds the longest subsequence present in two sequences without changing the order of elements. The idea is to build a DP table where each cell represents the length of LCS up to that point.
+## Theory
 
-All-Pairs Shortest Path (Floyd–Warshall Algorithm)
+### Longest Common Subsequence (LCS)
+The Longest Common Subsequence (LCS) problem is a classic Dynamic Programming problem. It finds the longest subsequence common to two sequences while maintaining the order of elements. A subsequence does not need to be contiguous.
 
-The All-Pairs Shortest Path problem aims to find the shortest paths between all pairs of vertices in a graph. The Floyd–Warshall algorithm uses Dynamic Programming to update distances by considering each vertex as an intermediate point.
+Dynamic Programming is used to store intermediate results in a table to avoid redundant computations.
 
-Algorithm
-For Longest Common Subsequence (LCS)
-Initialize a 2D DP table of size (m+1) × (n+1)
-If characters match, dp[i][j] = dp[i-1][j-1] + 1
-Else, dp[i][j] = max(dp[i-1][j], dp[i][j-1])
-Repeat until the table is filled
-The result is stored in dp[m][n]
-For All-Pairs Shortest Path (Floyd–Warshall)
-Initialize distance matrix with given graph weights
-For each vertex k, update all pairs (i, j)
-If dist[i][j] > dist[i][k] + dist[k][j], update it
-Repeat for all vertices
-Final matrix contains shortest distances between all pairs
-Input
-LCS
+### All-Pairs Shortest Path (Floyd–Warshall Algorithm)
+The All-Pairs Shortest Path problem aims to find the shortest distances between every pair of vertices in a graph. The Floyd–Warshall algorithm applies Dynamic Programming by considering each vertex as an intermediate node to improve path distances.
 
-Two sequences (strings)
+---
 
-All-Pairs Shortest Path
+## Algorithm
 
-A weighted graph represented as an adjacency matrix
+### Longest Common Subsequence (LCS)
+1. Initialize a DP table of size (m+1) × (n+1)
+2. If characters match:
+   dp[i][j] = dp[i-1][j-1] + 1
+3. Else:
+   dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+4. Fill the table row by row
+5. The final answer is stored in dp[m][n]
 
-Output
-LCS
+### All-Pairs Shortest Path (Floyd–Warshall)
+1. Initialize the distance matrix using graph weights
+2. For each vertex k:
+   - For each pair (i, j):
+     - If dist[i][j] > dist[i][k] + dist[k][j]
+       update dist[i][j]
+3. Repeat for all vertices
+4. Final matrix gives shortest distances between all pairs
 
-Length of the longest common subsequence
+---
 
-All-Pairs Shortest Path
+## Input
 
-Matrix showing shortest distances between every pair of vertices
+### LCS
+- Two strings (sequence 1 and sequence 2)
 
-Graph Visualization
-For LCS: A matrix visualization showing how subsequence length builds up
-For Floyd–Warshall: Graph representation showing shortest paths between nodes
-Python can be used with libraries like matplotlib or networkx to visualize results
-Time Complexity
-LCS: O(m × n)
-Floyd–Warshall: O(n³)
+### All-Pairs Shortest Path
+- A weighted graph represented as an adjacency matrix
+
+---
+
+## Output
+
+### LCS
+- Length of the longest common subsequence
+
+### All-Pairs Shortest Path
+- Matrix showing shortest distances between every pair of vertices
+
+---
+
+## Graph Visualization
+
+- LCS:
+  A DP table visualization showing how the subsequence length is built
+
+- Floyd–Warshall:
+  Graph visualization showing shortest paths between nodes
+
+- Tools:
+  Python libraries like `matplotlib` and `networkx` can be used
+
+---
+
+## Time Complexity
+
+- LCS: O(m × n)
+- Floyd–Warshall: O(n³)
+
+---
+
+## Conclusion
+
+This experiment demonstrates the power of Dynamic Programming in solving complex problems efficiently.
+
+- LCS is useful in text comparison, DNA sequencing, and pattern matching
+- Floyd–Warshall is useful in network routing and graph analysis
+
+Both algorithms avoid redundant calculations and provide optimal solutions. Visualization further helps in understanding how the solution evolves step by step.
