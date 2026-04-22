@@ -1,5 +1,5 @@
 
-# Lab-10: Dynamic Programming Problems
+# Lab-9: Dynamic Programming Problems
 
 ---
 
