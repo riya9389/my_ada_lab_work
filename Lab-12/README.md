@@ -1,4 +1,4 @@
-## 🔹 1. Sum of Subsets Problem
+## 1. Sum of Subsets Problem
 
 **Problem:**  
 Given a set of weights \( W = \{w_1, w_2, ..., w_n\} \) and a target sum \( m \), find all subsets whose sum equals \( m \).
@@ -22,7 +22,7 @@ if (k+1 ≤ n AND s + r - w[k] ≥ m AND s + w[k+1] ≤ m)
 **Time Complexity:**  
 Worst Case: `O(2^n)`
 
-## 🔹 2. Graph Coloring (m-Coloring Problem)
+## 2. Graph Coloring (m-Coloring Problem)
 
 **Problem:**  
 Given a graph with `n` vertices and `m` colors, determine whether the graph can be colored such that no two adjacent vertices have the same color.
@@ -63,7 +63,7 @@ while(true)
 Worst Case: `O(m^n)`
 
 
-## 🔹 3. Hamiltonian Cycle Problem
+## 3. Hamiltonian Cycle Problem
 
 **Problem:**  
 Given a graph, find a cycle that visits every vertex exactly once and returns to the starting vertex.
